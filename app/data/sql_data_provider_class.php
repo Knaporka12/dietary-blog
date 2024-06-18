@@ -8,6 +8,7 @@
     class sqlDataProvider extends dataProvider {
 
         private $user = CONFIG['dbUser'];
+        private $password = CONFIG['dbPassword'];
 
         //POSTY
 
@@ -200,7 +201,7 @@
         private function connect(){
 
             try {
-                $db =  new PDO($this->source, $this->user);
+                $db =  new PDO($this->source, $this->user, $this->password);
                 $_SESSION['error'] = null;
                 return $db;
             } catch (PDOException $err) {
