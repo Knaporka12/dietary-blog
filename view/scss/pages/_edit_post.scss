@@ -1,0 +1,39 @@
+.edit-post {
+    @include flex-center(column, nowrap);
+    flex-grow: 1;
+    width: 85%;
+    gap: 5rem;
+    padding: 2rem;
+    background-color: $background-color;
+    box-shadow: 0px 0px 5px $background-color;
+
+    &__form {
+        @include flex-center(column, nowrap);
+        gap: 3rem;
+        width: 100%;
+
+        div {
+            @include flex-center(column, nowrap);
+            gap: 1rem;
+            width: 100%;
+        }
+
+        label {
+            font-size: 1.55rem;
+            font-weight: bold;
+        }
+
+        input {
+            font-size: 1.35rem;
+            width: 60%;
+        }
+
+        textarea {
+            font-size: 1.15rem;
+            padding: 0.75rem;
+            max-width: 85%;
+            line-height: 1.5;
+        }
+    }
+
+}

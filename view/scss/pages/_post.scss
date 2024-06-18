@@ -1,0 +1,76 @@
+.post-page{
+    @include flex-center(column, nowrap);
+    flex-grow: 1;
+    width: 85%;
+    gap: 5rem;
+    padding: 2rem;
+    background-color: $background-color;
+    box-shadow: 0px 0px 5px $background-color;
+
+    &__h2 {
+        font-size: 2.35rem;
+        max-width: 90%;
+    }
+
+    &__container-category {
+        @include flex-center();
+        gap: 1rem;
+    }
+
+    &__h3 {
+        font-size: 1.85rem;
+    }
+
+    &__link-category {
+        font-size: 1.85rem;
+        color: $theme-color;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 0px;
+            height: 2px;
+            background-color: $theme-color;
+            transition: 0.2s all;
+            transform: translateX(-50%);
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+
+    &__para-content {
+        font-size: 1.15rem;
+        max-width: 70%;
+        line-height: 1.75;
+    }
+
+    &__container-bottom {
+        @include flex-center();
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    &__para-author {
+        @include flex-center();
+        gap: 0.5rem;
+        font-size: 1.3rem;
+
+        span {
+            white-space: nowrap;
+            color: $theme-color;
+        }
+    }
+
+    &__container-manage-post {
+        @include flex-center();
+        gap: 1.65rem;
+        width: 100%;
+        justify-content: right;
+    }
+
+}

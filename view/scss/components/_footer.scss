@@ -1,0 +1,13 @@
+.footer {
+    width: 100%;
+    @include center-content();
+    padding: 1rem 0rem;
+    background: linear-gradient(to bottom, $font-color-secondary, $theme-color);
+    color: $font-color-secondary;
+
+    &__h2{
+        font-size: 1.65rem;
+        position: relative;
+        top: 3px;
+    }
+}

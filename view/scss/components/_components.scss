@@ -1,0 +1,74 @@
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: $font-color;
+}
+
+li{
+    list-style:none;
+}
+
+p, h1, h2, h3, button, figcaption, article, label {
+    text-align: center;
+}
+
+button {
+    font-size: 1.35rem;
+    border: $theme-border;
+    border-radius: 20px;
+    color: $theme-color;
+    background-color: $font-color-secondary;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    transition: 0.2s all;
+
+    &:hover , &.active{
+        color: $font-color-secondary;
+        background-color: $theme-color;
+        box-shadow: 0px 0px 8px $font-color;
+    }
+}
+
+input[type=text], select, option {
+    font-size: 1.3rem;
+    outline: none;
+    padding: 0.35rem 0.25rem;
+    border: 2px solid gray;
+}
+
+select, option {
+    font-size: 1.2rem;
+}
+
+h2.error {
+    font-size: 1.5rem;
+    color: $invalid-color;
+}
+
+h2.no-matching {
+    font-size: 1.8rem;
+}
+
+a.home-link {
+    color: $theme-color;
+    font-size: 1.45rem;
+    transition: 0.2s all;
+
+    &:hover {
+        font-weight: bold;
+    }
+}
+
+button.red-btn {
+    
+    border: 2px solid $invalid-color;
+        color: $invalid-color;
+
+    &:hover {
+        background-color: $invalid-color;
+        color: $font-color-secondary;
+    }
+}

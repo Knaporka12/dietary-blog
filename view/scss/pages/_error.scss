@@ -1,0 +1,10 @@
+.error {
+    @include flex-center(column, nowrap);
+    width: 100%;
+    gap: 3rem;
+
+    &__h2 {
+        max-width: 60%;
+    }
+
+}

@@ -1,0 +1,131 @@
+.home {
+
+    @include flex-center(column, nowrap);
+    gap: 1rem;
+    flex-grow: 1;
+    width: 85%;
+    padding: 2rem 2rem;
+    padding-bottom: 5rem;
+    background-color: $background-color;
+    box-shadow: 0px 0px 10px $background-color;
+
+    &__h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__form-search {
+        @include flex-center();
+        gap: 1.25rem;
+        width: 90%;
+        margin-bottom: 3rem;
+
+        i{
+            color: gray;
+        }
+    }
+
+    &__input-search {
+        border: 2px solid gray;
+        border-radius: 22px;
+        width: 75%;
+        padding: 0rem 0.5rem;
+    }
+
+    &__btn-search {
+        all: unset;
+        transition: 0.2s all;
+
+        &:hover {
+            all: unset;
+            transition: 0.2s all;
+            cursor: pointer;
+            transform: scale(1.2);
+            
+            i {
+                color: $theme-color;
+            }
+        }
+    }
+
+    &__form-categories {
+        @include flex-center(row, wrap);
+        width: 100%;
+        gap: 1rem;
+        //justify-content: left;
+        margin-bottom: 1.5rem
+    }
+
+    &__form-add-category {
+        @include flex-center(column, nowrap);
+        gap: 1rem;
+        //justify-content: left;
+        width: 100%;
+        margin-bottom: 5rem;
+
+        div {
+            @include flex-center();
+            gap: 1rem;
+        }
+
+        button {
+            @include flex-center();
+            gap: 0.55rem;
+        }
+    }
+
+    &__para-komunikat-invalid-category {
+        font-size: 1.35rem;
+        display: block;
+    }
+
+    &__post-list {
+        @include flex-center(row, wrap);
+        gap: 2rem;
+    }
+
+    &__article-post {
+        @include flex-center(column, nowrap);
+        justify-content: space-between;
+        gap: 1rem;
+        border: $theme-border; 
+        border-radius: 16px;
+        width: 400px;
+        padding-bottom: 0.75rem;
+        height: 600px;
+    }
+
+    &__figure-post {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            border-bottom: $theme-border;
+        }
+    }
+
+    &__h3-post, &__para-post {
+        max-width: 90%;
+    }
+
+    &__h3-post {
+        font-size: 1.6rem;
+    }
+
+    &__para-post {
+        font-size: 1.1rem;
+    }
+
+    &__link-post {
+        font-size: 1.3rem;
+        transition: 0.1s all;
+
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    
+}

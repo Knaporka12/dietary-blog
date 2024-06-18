@@ -1,0 +1,86 @@
+.account {
+   @include flex-center(column, nowrap);
+    flex-grow: 1;
+    width: 85%;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: $background-color;
+    box-shadow: 0px 0px 5px $background-color;
+
+    &__h2 {
+        font-size: 2.65rem;
+        margin-bottom: 3rem;
+    }
+
+    &__para-dane {
+        font-size: 1.35rem;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 1rem;
+
+        span {
+            font-weight: bold;
+            color: $theme-color;
+            margin-left: 0.75rem;
+        }
+
+        &.last {
+            margin-bottom: 2.25rem;
+        }
+
+    }
+
+    button {
+        margin-bottom: 3rem;
+    }
+
+    &__post-list {
+        @include flex-center(row, wrap);
+        gap: 2rem;
+    }
+
+    &__article-post {
+        @include flex-center(column, nowrap);
+        justify-content: space-between;
+        gap: 1rem;
+        border: $theme-border; 
+        border-radius: 16px;
+        width: 400px;
+        padding-bottom: 0.75rem;
+        height: 600px;
+    }
+
+    &__figure-post {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            border-bottom: $theme-border;
+        }
+    }
+
+    &__h3-post, &__para-post {
+        max-width: 90%;
+    }
+
+    &__h3-post {
+        font-size: 1.6rem;
+    }
+
+    &__para-post {
+        font-size: 1.1rem;
+    }
+
+    &__link-post {
+        font-size: 1.3rem;
+        transition: 0.1s all;
+
+        &:hover {
+            color: $theme-color;
+        }
+    }
+
+}

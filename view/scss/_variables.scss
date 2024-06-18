@@ -1,0 +1,58 @@
+$theme-color: #009000;
+$background-color: lighten(#D0F0C0, 5%);
+$font-color: #000;
+$font-color-secondary:#fff;
+$theme-border: 2px solid $theme-color;
+$valid-color: rgb(44, 185, 44);
+$invalid-color: rgb(218, 25, 25);
+
+@mixin flex-center($direction:row , $wrap: nowrap){
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin center-content(){ 
+    display: grid;
+    place-content: center;
+}
+
+@mixin active() {
+    transform: translateY(-6px);
+    background-color: lighten($theme-color, 40%);
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes komunikat-slide {
+
+    0%{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes laureat-card-slide {
+
+    0%{
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
